@@ -1,0 +1,20 @@
+deb http://archive.ubuntu.com/ubuntu/ intrepid main restricted universe
+deb-src http://archive.ubuntu.com/ubuntu/ intrepid main restricted universe
+
+deb http://archive.ubuntu.com/ubuntu/ intrepid-updates main restricted universe
+deb-src http://archive.ubuntu.com/ubuntu/ intrepid-updates main restricted universe
+
+deb http://security.ubuntu.com/ubuntu intrepid-security main restricted universe
+deb-src http://security.ubuntu.com/ubuntu intrepid-security main restricted universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ intrepid universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ intrepid universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ intrepid-updates universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ intrepid-updates universe
+
+deb http://us.archive.ubuntu.com/ubuntu/ intrepid multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ intrepid multiverse
+
+deb http://us.archive.ubuntu.com/ubuntu/ intrepid-updates multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ intrepid-updates multiverse

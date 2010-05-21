@@ -1,0 +1,25 @@
+#! /bin/sh 
+
+# From http://skytteren.blogspot.com/2009/05/installing-glassfish-v3-on-ubuntu.html
+
+GLASSFISHPATH=/opt/glassfishv3/bin 
+
+case "$1" in 
+start) 
+echo "starting glassfish from $GLASSFISHPATH" 
+sudo -u glassfish $GLASSFISHPATH/asadmin start-domain domain1 
+;; 
+restart) 
+$0 stop 
+$0 start 
+;; 
+stop) 
+echo "stopping glassfish from $GLASSFISHPATH" 
+sudo -u glassfish $GLASSFISHPATH/asadmin stop-domain domain1 
+;; 
+*) 
+echo $”usage: $0 {start|stop|restart}” 
+exit 3 
+;; 
+esac 
+:

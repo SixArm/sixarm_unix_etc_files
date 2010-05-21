@@ -1,0 +1,4 @@
+# To download and install key:
+# wget -q http://download.virtualbox.org/virtualbox/debian/sun_vbox.asc -O- | sudo apt-key add -
+deb http://download.virtualbox.org/virtualbox/debian jaunty non-free
+

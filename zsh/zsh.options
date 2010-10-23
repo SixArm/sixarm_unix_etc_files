@@ -7,6 +7,9 @@ setopt AUTO_CD
 # Automatically list choices on an ambiguous completion.
 setopt AUTO_LIST
 
+# Background processes run full speed
+unsetopt BGNICE
+
 # Don't chase directory dots because they exist for a reason.
 unsetopt CHASE_DOTS
 
@@ -31,10 +34,15 @@ setopt HASH_DIRS
 # Skip command line in the history list if it duplicates the previous line.
 setopt HIST_IGNORE_DUPS
 
+# Restart running processes on exit.
+setopt HUP
+
 # No beep ever.
 setopt NO_BEEP
 
+# Enable variable substitution in the prompt.
+setopt PROMPT_SUBST
+
 # Share history between zsh processes.
 setopt SHARE_HISTORY
-
 

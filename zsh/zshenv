@@ -21,13 +21,13 @@ fi
 ### HISTORY ###
 
 # location of history
-export HISTFILE=~/.histfile
+(( ${+HISTFILE} )) || export HISTFILE=~/.histfile
 
 # number of lines kept in history
-export HISTSIZE=10000
+(( ${+HISTSIZE} )) || export HISTSIZE=10000
 
 # number of lines saved in the history after logout
-export SAVEHIST=10000 
+(( ${+SAVEHIST} )) || export SAVEHIST=10000 
 
 
 ### APPS ###
@@ -82,3 +82,4 @@ setopt appendhistory autocd beep extendedglob nomatch notify
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
+

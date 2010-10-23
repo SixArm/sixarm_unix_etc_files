@@ -1,0 +1,17 @@
+###
+#
+# Alias
+#
+###
+
+# e => edit
+alias e="emacs -nw"
+
+# f => find in files
+alias f="ack-grep"
+
+# l => list files
+alias l='ls -CF'
+
+# m => more (or most)
+alias m='most'

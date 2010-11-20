@@ -1,0 +1,36 @@
+# Mutt using the Maildir format for storing each email as a file.
+# From http://www.elho.net/mutt/maildir/
+
+set mbox_type=Maildir
+
+
+# Configure locations of common folders
+   
+set folder="~/Maildir"
+set mask="!^\\.[^.]"
+set mbox="~/Maildir"
+set record="+.Sent"
+set postponed="+.Drafts"
+set spoolfile="~/Maildir"
+
+
+# Set up mailboxes by scanning for all subfolders in ~/Maildir
+# Note that this requires find(1) from the GNU findutils,
+# which on BSD systems usually is installed as gfind(1).
+
+mailboxes `echo -n "+ "; find ~/Maildir -maxdepth 1 -type d -name ".*" -printf "+'%f' "`
+
+
+# Add macros to make the folder browser usable 
+# by always using the mailboxes setup above
+
+macro index c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+macro pager c "<change-folder>?<toggle-mailboxes>" "open a different folder"
+
+
+# To additionally get straight to the folder browser when copying, 
+# moving and attaching mail, add the following macros.
+
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+macro compose A "<attach-message>?<toggle-mailboxes>" "attach message(s) to this message"

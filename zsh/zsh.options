@@ -22,8 +22,9 @@ setopt CHECK_JOBS
 # Enable tab completion in the middle of a word.
 setopt COMPLETE_IN_WORD
 
-# Correct mistakes.
-setopt CORRECT
+# Don't correct mistakes.
+unsetopt CORRECT
+unsetopt CORRECT_ALL
 
 # Place the location of each command in the hash table.
 setopt HASH_CMDS

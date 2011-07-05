@@ -11,5 +11,3 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 RUBYMINE_JDK=/opt/jdk
 RUBYOPT=rubygems 
 TERM=xterm-256color
-
-

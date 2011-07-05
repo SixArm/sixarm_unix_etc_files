@@ -1,0 +1,3 @@
+deb http://ppa.launchpad.net/chromium-daily/ppa/ubuntu lucid main
+deb-src http://ppa.launchpad.net/chromium-daily/ppa/ubuntu lucid main
+

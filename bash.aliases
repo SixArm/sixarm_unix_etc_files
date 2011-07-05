@@ -1,4 +1,0 @@
-alias emacs='e -nw'
-alias emacs='emacs -nw'
-alias rubymine='/opt/rubymine/bin/rubymine.sh'
-alias firefox='/opt/firefox/firefox'

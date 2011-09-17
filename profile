@@ -1,5 +1,17 @@
-# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))
+# /etc/profile
+
+# System-wide .profile file for the Bourne shell (sh(1))
 # and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
+
+pathmunge () {
+        if ! echo $PATH | /bin/egrep -q "(^|:)$1($|:)" ; then
+           if [ "$2" = "after" ] ; then
+              PATH=$PATH:$1
+           else
+              PATH=$1:$PATH
+           fi
+        fi
+}
 
 if [ -d /etc/profile.d ]; then
   for i in /etc/profile.d/*.sh; do
@@ -26,6 +38,7 @@ if [ "$PS1" ]; then
   fi
 fi
 
+
 if [ $DISPLAY ]
 then
   # Add the 3 lines below to Convert caps-lock into Control
@@ -43,6 +56,15 @@ then
   #xmodmap -e 'keysym Super_R = F16'
 fi
 
+if [ -z "$INPUTRC" -a ! -f "$HOME/.inputrc" ]; then
+    INPUTRC=/etc/inputrc
+fi
+
+if [ -d "$HOME/.rbenv/bin" ]; then
+  pathmunge $HOME/.rbenv/bin
+fi
+
+export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE INPUTRC
 
 umask 022
-
+unset pathmunge

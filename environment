@@ -1,18 +1,14 @@
 JDK_HOME=/opt/jdk
 JRUBY_HOME=/opt/jruby
-<<<<<<< HEAD
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/nagios/plugins:/opt/ruby191/bin:/opt/jdk/bin:/opt/jruby/bin:/opt/rubymine/bin:/opt/firefox:/home/sixarm/github/sixarm_mysql:/home/sixarm/github/sixarm_sixarm_ruby_gem_scripts:/home/sixarm/github/sixarm_unix_shell_scripts:/home/sources/git/mainline/bin:"
-=======
-PATH="
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/nagios/plugins:/opt/ruby191/bin:/opt/jdk/bin:/opt/jruby/bin:/opt/rubymine/bin:/opt/firefox:/home/sixarm/github/sixarm_debian_dpkg_tools:/home/sixarm/github/sixarm_htx:/home/sixarm/github/sixarm_mysql:/home/sixarm/github/sixarm_strategem:/home/sixarm/github/sixarm_unix_shell_scripts:/home/sources/git/mainline/bin:"
->>>>>>> 4b723527fc43d12bc87d0a8303640e293581ba8b
+PATH="/opt/ruby/ruby-1.9.2-p290/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/opt/firefox:/opt/jdk/bin:/opt/jruby/bin:/opt/rubymine/bin:/opt/sixarm_debian_dpkg_tools:/opt/sixarm_htx:/opt/sixarm_mysql:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/home/sources/git/mainline/bin"
 LANGUAGE=en_US.UTF-8
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
-LD_LIBRARY_PATH="/lib32:/usr/lib32:/opt/jruby/lib"
+LD_LIBRARY_PATH="/lib32:/usr/lib32:/usr/local/pgsql/lib:/opt/jruby/lib"
 HISTFILESIZE=999999
 HISTSIZE=9999
 HISTTIMEFORMAT="%Y/%m/%d %T "
+MANPATH=/usr/local/pgsql/man
 RUBYMINE_JDK=/opt/jdk
 RUBYOPT=rubygems
 TERM=xterm-256color

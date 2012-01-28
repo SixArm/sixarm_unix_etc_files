@@ -31,8 +31,8 @@ RUBYOPT='-r rubygems -r psych'
 #   * use the `-Wl,--rpath -Wl,LIBDIR' linker flag
 #   * have your system administrator add LIBDIR to `/etc/ld.so.conf'
 #
-# We include all of them we use  in all the settings we've encountered;
-# you may want to tune this for  your particular	system or need.
+# We include all of them we use in all the settings we've encountered;
+# you may want to tune this for your particular system or need.
 LD_LIBRARY_PATH=/lib32:/usr/lib32:/usr/local/pgsql/lib:/opt/jruby/lib:/opt/sqlite/current/lib:/opt/yaml/current/lib
 LD_RUN_PATH=/opt/sqlite/version/lib:/opt/yaml/current/lib
 LDFLAGS=/opt/sqlite/current/lib:/opt/yaml/current/lib

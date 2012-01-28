@@ -10,5 +10,5 @@ HISTSIZE=9999
 HISTTIMEFORMAT="%Y/%m/%d %T "
 MANPATH=/usr/local/pgsql/man
 RUBYMINE_JDK=/opt/jdk
-RUBYOPT=rubygems
+RUBYOPT='-r rubygems -r psych'
 TERM=xterm-256color

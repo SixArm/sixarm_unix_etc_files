@@ -1,17 +1,40 @@
-JDK_HOME=/opt/jdk
-JRUBY_HOME=/opt/jruby
 PATH=/opt/redis/redis/current/bin:/opt/ruby-build/bin:/opt/ruby/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/opt/firefox:/opt/jdk/bin:/opt/jruby/bin:/opt/rubymine/bin:/opt/sixarm_debian_dpkg_tools:/opt/sixarm/sixarm_git_gitconfig:/opt/sixarm/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/home/sources/git/mainline/bin:/usr/local/Trolltech/Qt-4.7.4/bin
+MANPATH=/usr/local/pgsql/man
+TERM=xterm-256color
+
+# LANGUAGE & COLLATION
 LANGUAGE=en_US.UTF-8
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
+
+# HISTORY
+HISTFILESIZE=999999
+HISTSIZE=9999
+HISTTIMEFORMAT="%Y/%m/%d %T "
+
+# JAVA
+JDK_HOME=/opt/jdk
+JRUBY_HOME=/opt/jruby
+
+# RUBY
+RUBYMINE_JDK=/opt/jdk
+RUBYOPT='-r rubygems -r psych'
+
+# LIBRARY SETTINGS
+#
+# You can specify the full pathname of the library,
+# or use the `-LLIBDIR' flag during linking and do
+# at least one of the following:
+#
+#   * add LIBDIR to the `LD_LIBRARY_PATH' environment variable during execution
+#   * add LIBDIR to the `LD_RUN_PATH' environment variable during linking
+#   * use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+#   * have your system administrator add LIBDIR to `/etc/ld.so.conf'
+#
+# We include all of them we use  in all the settings we've encountered;
+# you may want to tune this for  your particular	system or need.
 LD_LIBRARY_PATH=/lib32:/usr/lib32:/usr/local/pgsql/lib:/opt/jruby/lib:/opt/sqlite/current/lib:/opt/yaml/current/lib
 LD_RUN_PATH=/opt/sqlite/version/lib:/opt/yaml/current/lib
 LDFLAGS=/opt/sqlite/current/lib:/opt/yaml/current/lib
 LIBS=/opt/sqlite/current/lib:/opt/yaml/current/lib
-HISTFILESIZE=999999
-HISTSIZE=9999
-HISTTIMEFORMAT="%Y/%m/%d %T "
-MANPATH=/usr/local/pgsql/man
-RUBYMINE_JDK=/opt/jdk
-RUBYOPT='-r rubygems -r psych'
-TERM=xterm-256color
+

@@ -1,26 +1,81 @@
-PATH=/opt/gcc/current/bin:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/ruby-build/bin:/opt/sqlite/current/bin:/opt/subversion/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/opt/firefox:/opt/jdk/bin:/opt/jruby/bin:/opt/rubymine/bin:/opt/sixarm_debian_dpkg_tools:/opt/sixarm/sixarm_git_gitconfig:/opt/sixarm/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/home/sources/git/mainline/bin:/usr/local/Trolltech/Qt-4.7.4/bin
+##
+# This /etc/environment file is sourced for each new shell.
+#
+# It sets the default PATH, load paths, language, history,
+# and application-specific variables for Java, Ruby, etc.
+##
+
+# PATH:
+#
+#     # typical user .rbenv
+#     ~/.rbenv/shims
+#     ~/.rbenv/bin
+#
+#     # system customizations
+#     /opt/*/current gcc, jdk, jruby, redis, ruby, ruby-build, rubymine, sqlite
+#
+#     # typical system
+#     /usr/local/sbin
+#     /usr/local/bin
+#     /usr/sbin
+#     /usr/bin
+#     /sbin
+#     /bin
+#     /usr/games
+#
+#     # sixarm repositories
+#     /opt/sixarm/* 
+#       sixarm_debian_dpkg_tools
+#       sixarm_git_gitconfig
+#       sixarm_htx
+#       sixarm_mysql_scripts
+#       sixarm_postgresql_scripts
+#       sixarm_ruby_gem_scripts
+#       sixarm_strategem
+#       sixarm_unix_shell_scripts
+#
+#     # various system software in typical places
+#     /usr/lib/nagios/plugins
+#     /usr/local/pgsql/bin
+#
+#     # qt in an arbitrary place -- feel free to move it somewhere better
+#     /home/sources/git/mainline/bin:/usr/local/Trolltech/Qt-4.7.4/bin
+#
+PATH=~/.rbenv/shims:~/.rbenv/bin:/opt/gcc/current/bin:/opt/jdk/current/bin:/opt/jruby/current/bin:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/ruby-build/bin:/opt/rubymine/current/bin:/opt/sqlite/current/bin:/opt/subversion/current/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/opt/sixarm/sixarm_debian_dpkg_tools:/opt/sixarm/sixarm_git_gitconfig:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/home/sources/git/mainline/bin:/usr/local/Trolltech/Qt-4.7.4/bin
+
 MANPATH=/usr/local/pgsql/man
 TERM=xterm-256color
 
-# LANGUAGE & COLLATION
+
+# Language & Collation
+
+LANG=en_US.UTF-8
 LANGUAGE=en_US.UTF-8
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
-# HISTORY
+
+# History
+
 HISTFILESIZE=999999
 HISTSIZE=9999
 HISTTIMEFORMAT="%Y/%m/%d %T "
 
-# JAVA
-JDK_HOME=/opt/jdk
-JRUBY_HOME=/opt/jruby
 
-# RUBY
-RUBYMINE_JDK=/opt/jdk
+# Java-related
+
+JDK_HOME=/opt/jdk/current
+JRUBY_HOME=/opt/jruby/current
+
+
+# Ruby-related
+
+RUBYMINE_JDK=/opt/jdk/current
 RUBYOPT='-r rubygems -r psych'
+RBENV_ROOT=~/.rbenv
 
-# LIBRARY SETTINGS
+
+# Library Settings
 #
 # You can specify the full pathname of the library,
 # or use the `-LLIBDIR' flag during linking and do
@@ -75,8 +130,9 @@ RUBYOPT='-r rubygems -r psych'
 #     The 'perl' binary won't run until its shared libraries are installed,
 #     unless LD_LIBRARY_PATH is used to bootstrap the process.
 
-LD_LIBRARY_PATH=/opt/jruby/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib
-LD_RUN_PATH=/opt/jruby/lib:/opt/gmp/current/lib:/opt/sqlite/version/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
-LDFLAGS=-L/opt/jruby/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
-LIBS=/opt/jruby/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
+LD_LIBRARY_PATH=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib
+LD_RUN_PATH=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
+LDFLAGS=-L/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
+LIBS=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
+
 

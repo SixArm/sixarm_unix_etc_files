@@ -107,6 +107,13 @@ JDK_HOME=/opt/jdk/current
 JRUBY_HOME=/opt/jruby/current
 
 
+# Oracle-related
+
+NLS_LANG=AMERICAN_AMERICA.UTF8
+ORACLE_HOME=/opt/oracle/instantclient
+DYLD_LIBRARY_PATH=$ORACLE_HOME
+
+
 # Ruby-related
 
 RUBYMINE_JDK=/opt/jdk/current

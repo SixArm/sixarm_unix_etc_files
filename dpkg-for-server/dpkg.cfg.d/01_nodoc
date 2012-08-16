@@ -1,0 +1,12 @@
+# dpkg reducing disk footprint
+# https://wiki.ubuntu.com/ReducingDiskFootprint
+
+# skip documentation
+path-exclude /usr/share/doc/*
+path-exclude /usr/share/man/*
+path-exclude /usr/share/groff/*
+path-exclude /usr/share/info/*
+
+# lintian stuff is small, but really unnecessary
+path-exclude /usr/share/lintian/*
+path-exclude /usr/share/linda/*

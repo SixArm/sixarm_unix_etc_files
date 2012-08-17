@@ -18,8 +18,10 @@ PATH=$PATH:~/.rbenv/bin
 # We want these versions to take precedence over the system versions.
 
 PATH=$PATH:/opt/gcc/current/bin
+PATH=$PATH:/opt/glassfish/current/bin
 PATH=$PATH:/opt/jdk/current/bin
 PATH=$PATH:/opt/jruby/current/bin
+PATH=$PATH:/opt/netbeans/current/bin
 PATH=$PATH:/opt/redis/current/bin
 PATH=$PATH:/opt/ruby/current/bin
 PATH=$PATH:/opt/ruby-build/bin

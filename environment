@@ -79,16 +79,13 @@ PATH=$PATH:/home/sources/git/mainline/bin
 PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
 
 
-###
-
-
-# Misc
+### Misc
 
 MANPATH=/usr/local/pgsql/man
 TERM=xterm-256color
 
 
-# Language & Collation
+### Language & Collation
 
 LANG=en_US.UTF-8
 LANGUAGE=en_US.UTF-8
@@ -96,27 +93,45 @@ LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
 
-# History
+### History
 
 HISTFILESIZE=999999
 HISTSIZE=9999
 HISTTIMEFORMAT="%Y/%m/%d %T "
 
 
-# Java-related
+### Go related
+
+# Our operating system
+GOOS=linux
+
+# The CPU architecture of our machine: "386" or "amd64".
+GOARCH=amd64
+ 
+# Directory for the Go installer to put the source code before compilation
+GOROOT=/opt/go/source
+ 
+# Directory where the installer will place the finished files
+GOBIN=/opt/go/bin
+ 
+# Go binaries in command path
+PATH=$PATH:$GOBIN
+
+
+### Java-related
 
 JDK_HOME=/opt/jdk/current
 JRUBY_HOME=/opt/jruby/current
 
 
-# Oracle-related
+### Oracle-related
 
 NLS_LANG=AMERICAN_AMERICA.UTF8
 ORACLE_HOME=/opt/oracle/instantclient
 DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 
-# Ruby-related
+### Ruby-related
 
 RUBYMINE_JDK=/opt/jdk/current
 RUBYOPT='-r rubygems -r psych'

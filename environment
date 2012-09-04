@@ -49,7 +49,7 @@ PATH=$PATH:/usr/local/pgsql/bin
 
 # Paths for our SixArm repositories of utilities
 
-PATH=$PATH:/opt/sixarm/sixarm_debian_dpkg_tools
+PATH=$PATH:/opt/sixarm/sixarm_debian_dpkg_scripts
 PATH=$PATH:/opt/sixarm/sixarm_gem_scripts
 PATH=$PATH:/opt/sixarm/sixarm_git_gitconfig
 PATH=$PATH:/opt/sixarm/sixarm_git_scripts

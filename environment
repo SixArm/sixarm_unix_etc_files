@@ -58,6 +58,7 @@ PATH=$PATH:/opt/sixarm/sixarm_mysql_scripts
 PATH=$PATH:/opt/sixarm/sixarm_postgresql_scripts
 PATH=$PATH:/opt/sixarm/sixarm_ruby_gem_scripts
 PATH=$PATH:/opt/sixarm/sixarm_strategem
+PATH=$PATH:/opt/sixarm/sixarm_unix_installation_help
 PATH=$PATH:/opt/sixarm/sixarm_unix_shell_scripts
 
 # Path for git mainline to have up-to-date git scripts.

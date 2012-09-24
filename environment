@@ -192,3 +192,7 @@ LDFLAGS=-L/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/o
 LIBS=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
 
 
+# Conclusion
+
+export PATH
+

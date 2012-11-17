@@ -11,8 +11,8 @@ PATH=""
 
 # Paths for typical user .rbenv ruby environment
 
-PATH=$PATH:~/.rbenv/shims
-PATH=$PATH:~/.rbenv/bin
+#PATH=$PATH:~/.rbenv/shims
+#PATH=$PATH:~/.rbenv/bin
 
 # Paths for current versions of software in /opt/*/current directory.
 # We want these versions to take precedence over the system versions.
@@ -127,7 +127,7 @@ DYLD_LIBRARY_PATH=$ORACLE_HOME
 ### Ruby-related
 
 RUBYMINE_JDK=/opt/jdk/current
-RUBYOPT='-r rubygems -r psych'
+RUBYOPT='-rubygems -rpsych'
 RBENV_ROOT=~/.rbenv
 
 

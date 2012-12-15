@@ -7,27 +7,28 @@
 
 ### PATH
 
-PATH=""
+PATH="/"
 
 # Paths for typical user .rbenv ruby environment
 
-PATH=$PATH:~/.rbenv/shims
-PATH=$PATH:~/.rbenv/bin
+#PATH=$PATH:~/.rbenv/shims
+#PATH=$PATH:~/.rbenv/bin
 
 # Paths for current versions of software in /opt/*/current directory.
 # We want these versions to take precedence over the system versions.
 
 PATH=$PATH:/opt/gcc/current/bin
-PATH=$PATH:/opt/glassfish/current/bin
 PATH=$PATH:/opt/jdk/current/bin
 PATH=$PATH:/opt/jruby/current/bin
-PATH=$PATH:/opt/netbeans/current/bin
+PATH=$PATH:/opt/rbenv/bin
 PATH=$PATH:/opt/redis/current/bin
 PATH=$PATH:/opt/ruby/current/bin
 PATH=$PATH:/opt/ruby-build/bin
 PATH=$PATH:/opt/rubymine/current/bin
+PATH=$PATH:/opt/sbt/current/bin
 PATH=$PATH:/opt/sqlite/current/bin
 PATH=$PATH:/opt/subversion/current/bin
+
 
 # Paths for typical Unix setups; these are the Ubuntu defaults.
 
@@ -47,18 +48,16 @@ PATH=$PATH:/usr/lib/nagios/plugins
 
 PATH=$PATH:/usr/local/pgsql/bin
 
-# Paths for our SixArm repositories of utilities
+# Paths for our SixArm repositories of utilities:
 
 PATH=$PATH:/opt/sixarm/sixarm_debian_dpkg_scripts
-PATH=$PATH:/opt/sixarm/sixarm_gem_scripts
 PATH=$PATH:/opt/sixarm/sixarm_git_gitconfig
-PATH=$PATH:/opt/sixarm/sixarm_git_scripts
 PATH=$PATH:/opt/sixarm/sixarm_htx
 PATH=$PATH:/opt/sixarm/sixarm_mysql_scripts
 PATH=$PATH:/opt/sixarm/sixarm_postgresql_scripts
 PATH=$PATH:/opt/sixarm/sixarm_ruby_gem_scripts
+PATH=$PATH:/opt/sixarm/sixarm_ruby_gemforge
 PATH=$PATH:/opt/sixarm/sixarm_strategem
-PATH=$PATH:/opt/sixarm/sixarm_unix_installation_help
 PATH=$PATH:/opt/sixarm/sixarm_unix_shell_scripts
 
 # Path for git mainline to have up-to-date git scripts.
@@ -100,15 +99,15 @@ GOOS=linux
 
 # The CPU architecture of our machine: "386" or "amd64".
 GOARCH=amd64
- 
-# Directory for the Go installer to put the source code before compilation
-GOROOT=/opt/go/source
- 
-# Directory where the installer will place the finished files
+
+# Go root directory
+GOROOT=/opt/go
+
+# Go binary directory
 GOBIN=/opt/go/bin
- 
+
 # Go binaries in command path
-PATH=$PATH:$GOBIN
+PATH="$PATH:$GOBIN"
 
 
 ### Java-related
@@ -126,8 +125,11 @@ DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 ### Ruby-related
 
+GEM_HOME=/opt/ruby/current/lib/ruby/gems
+GEM_PATH=/opt/ruby/current/lib/ruby/gems
+
 RUBYMINE_JDK=/opt/jdk/current
-RUBYOPT='-r rubygems -r psych'
+RUBYOPT='-rubygems -rpsych'
 RBENV_ROOT=~/.rbenv
 
 
@@ -147,7 +149,7 @@ RBENV_ROOT=~/.rbenv
 #
 # From http://www.eyrie.org/~eagle/notes/rpath.html
 #
-# Here's a brief primer on the way that this works on Solaris and Linux. 
+# Here's a brief primer on the way that this works on Solaris and Linux.
 # The search paths for libraries come from three sources:
 #
 #   * the environment variable LD_LIBRARY_PATH (if set)
@@ -160,7 +162,7 @@ RBENV_ROOT=~/.rbenv
 #
 # If you want to pass flags to the linker, both in the configure step and the build step,
 # you can do this in two ways: either set LDFLAGS or LIBS. The difference between the two
-# is that LIBS will be appended to the command line, while LDFLAGS come earlier. 
+# is that LIBS will be appended to the command line, while LDFLAGS come earlier.
 #
 # From http://xahlee.org/UnixResource_dir/_/ldpath.html
 #
@@ -176,9 +178,9 @@ RBENV_ROOT=~/.rbenv
 #   * X11 uses LD_LIBRARY_PATH during its build process. X11 distributes its fonts
 #     in “bdf” format, and during the build process it needs to “compile” the bdf
 #     files into “pcf” files. LD_LIBRARY_PATH is used to point the the build lib
-#     directory so it can run bdftopcf during the build stage before the shared 
+#     directory so it can run bdftopcf during the build stage before the shared
 #     libraries are installed.
-#  
+#
 #   * Perl can be installed with most of its core code as a shared library.
 #     This is handy if you embed Perl in other programs -- you can compile them
 #     so they use the shared library and so you'll save memory at run time.
@@ -186,9 +188,18 @@ RBENV_ROOT=~/.rbenv
 #     The 'perl' binary won't run until its shared libraries are installed,
 #     unless LD_LIBRARY_PATH is used to bootstrap the process.
 
+# Clear
+LD_LIBRARY_PATH=
+LD_RUN_PATH=
+LDFLAGS=
+LIBS=
+
 LD_LIBRARY_PATH=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib
 LD_RUN_PATH=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
 LDFLAGS=-L/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
-LIBS=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
+#LIBS=/opt/jruby/current/lib:/opt/gmp/current/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib
 
 
+# Conclusion
+
+export PATH

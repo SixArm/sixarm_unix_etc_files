@@ -7,20 +7,63 @@
 # See the man page for details on how to write a sudoers file.
 #
 Defaults	env_reset
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+
+# Runas alias specification
+
+Runas_Alias	OP = root, operator
+Runas_Alias	DB = mysql, oracle, postgres, sybase
+
 
 # Host alias specification
 
+Host_Alias	SERVERS = ftp, mail, ns, www
+Host_Alias      DEPLOYS = development, test, production, ci, qa, ua, staging
+Host_Alias	ASSETS = assets, assets0, assets1, assets2, assets3
+
+
+# Command alias specification
+
+Cmnd_Alias	DUMP = /usr/sbin/dump, /usr/sbin/rdump, /usr/sbin/restore, /usr/sbin/rrestore, /usr/bin/mt
+Cmnd_Alias	KILL = /usr/bin/kill
+Cmnd_Alias	PRINT = /usr/sbin/lpc, /usr/bin/lprm
+Cmnd_Alias	SHELL = /usr/bin/sh, /usr/bin/csh, /usr/bin/ksh, /usr/local/bin/tcsh, /usr/bin/rsh, /usr/local/bin/zsh
+Cmnd_Alias	SU = /usr/bin/su
+Cmnd_Alias	VIPW = /usr/sbin/vipw, /usr/bin/passwd, /usr/bin/chsh, /usr/bin/chfn
+Cmnd_Alias      PKG = /usr/bin/apt-get, /usr/bin/aptitude, /usr/bin/dpkg
+
+
+# Commands that can deeply affect the entire machine
+
+Cmnd_Alias	HALT = /usr/sbin/halt, /usr/sbin/fasthalt
+Cmnd_Alias      SUSPEND = /usr/sbin/pm-suspend
+Cmnd_Alias	SHUTDOWN = /usr/sbin/shutdown
+Cmnd_Alias	REBOOT = /usr/sbin/reboot, /usr/sbin/fastboot
+
+
 # User alias specification
 
-# Cmnd alias specification
+User_Alias      WEBMASTERS = joel
+User_Alias      POSTMASTERS = joel
 
-# User privilege specification
-root ALL=(ALL:ALL) ALL
+
+### Permissions
+
+# The root user and wheel group can run everything everywhere
+root		ALL=(ALL) ALL
+%wheel		ALL=(ALL) ALL
 
 # Members of the admin group may gain root privileges
 %admin ALL=(ALL) ALL
 
 # Allow members of group sudo to execute any command
-%sudo ALL=(ALL:ALL) ALL
+%sudo ALL=(ALL) ALL
 
+# operator may run maintenance commands and anything in /usr/oper/bin/
+operator ALL = DUMP, KILL, PKG, PRINT, HALT, SUSPEND, SHUTDOWN, REBOOT, /usr/oper/bin/
+
+# See sudoers(5) for more information on "#include" directives:
 #includedir /etc/sudoers.d
+
+

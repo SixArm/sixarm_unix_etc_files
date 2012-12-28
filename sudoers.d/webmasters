@@ -1,0 +1,4 @@
+# The users in the WEBMASTERS User_Alias may run any command
+# as user www (which owns the web pages) or su to the www user.
+WEBMASTERS    www = (www) ALL, (root) /usr/bin/su www
+

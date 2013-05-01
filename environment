@@ -23,6 +23,7 @@ PATH=$PATH:/opt/jruby/current/bin
 PATH=$PATH:/opt/rbenv/bin
 PATH=$PATH:/opt/redis/current/bin
 PATH=$PATH:/opt/ruby/current/bin
+PATH=$PATH:/opt/rubygems/current/bin
 PATH=$PATH:/opt/ruby-build/bin
 PATH=$PATH:/opt/rubymine/current/bin
 PATH=$PATH:/opt/sbt/current/bin
@@ -126,8 +127,8 @@ DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 ### Ruby-related
 
-GEM_HOME=/opt/gems/current
-GEM_PATH=/opt/gems/current
+GEM_HOME=/opt/rubygems/current
+GEM_PATH=/opt/rubygems/current
 
 RUBYMINE_JDK=/opt/jdk/current
 RUBYOPT='-rubygems -rpsych'

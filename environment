@@ -20,6 +20,7 @@ PATH="/"
 PATH=$PATH:/opt/gcc/current/bin
 PATH=$PATH:/opt/jdk/current/bin
 PATH=$PATH:/opt/jruby/current/bin
+PATH=$PATH:/opt/packer
 PATH=$PATH:/opt/rbenv/bin
 PATH=$PATH:/opt/redis/current/bin
 PATH=$PATH:/opt/ruby/current/bin

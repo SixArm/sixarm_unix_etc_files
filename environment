@@ -7,7 +7,7 @@
 
 ### PATH
 
-PATH="/"
+PATH=/
 
 # Paths for typical user .rbenv ruby environment
 
@@ -20,13 +20,17 @@ PATH="/"
 PATH=$PATH:/opt/gcc/current/bin
 PATH=$PATH:/opt/jdk/current/bin
 PATH=$PATH:/opt/jruby/current/bin
+PATH=$PATH:/opt/jq
+PATH=$PATH:/opt/packer
 PATH=$PATH:/opt/rbenv/bin
 PATH=$PATH:/opt/redis/current/bin
 PATH=$PATH:/opt/ruby/current/bin
 PATH=$PATH:/opt/ruby-build/bin
+PATH=$PATH:/opt/rubygems/current/bin
 PATH=$PATH:/opt/rubymine/current/bin
 PATH=$PATH:/opt/sbt/current/bin
 PATH=$PATH:/opt/sqlite/current/bin
+PATH=$PATH:/opt/sublime/current/
 PATH=$PATH:/opt/subversion/current/bin
 
 
@@ -47,6 +51,7 @@ PATH=$PATH:/usr/lib/nagios/plugins
 # Path for PostgreSQL database
 
 PATH=$PATH:/usr/local/pgsql/bin
+MANPATH=$MANPATH:/usr/local/pgsql/man
 
 # Paths for our SixArm repositories of utilities:
 
@@ -74,7 +79,7 @@ PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
 
 ### Misc
 
-MANPATH=/usr/local/pgsql/man
+MANPATH=$MANPATH:/usr/local/pgsql/man
 TERM=xterm-256color
 
 
@@ -115,6 +120,7 @@ PATH="$PATH:$GOBIN"
 
 JDK_HOME=/opt/jdk/current
 JRUBY_HOME=/opt/jruby/current
+JRUBY_OPTS=--1.9
 
 
 ### Oracle-related
@@ -126,8 +132,8 @@ DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 ### Ruby-related
 
-GEM_HOME=/opt/gems/current
-GEM_PATH=/opt/gems/current
+GEM_HOME=/opt/rubygems/current
+GEM_PATH=/opt/rubygems/current
 
 RUBYMINE_JDK=/opt/jdk/current
 RUBYOPT='-rubygems -rpsych'

@@ -25,6 +25,7 @@ PATH=$PATH:/opt/packer
 PATH=$PATH:/opt/rbenv/bin
 PATH=$PATH:/opt/redis/current/bin
 PATH=$PATH:/opt/ruby/current/bin
+PATH=$PATH:/opt/rubygems/current/bin
 PATH=$PATH:/opt/ruby-build/bin
 PATH=$PATH:/opt/rubygems/current/bin
 PATH=$PATH:/opt/rubymine/current/bin

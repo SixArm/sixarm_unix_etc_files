@@ -35,14 +35,20 @@ PATH=$PATH:/opt/sublime/current/
 PATH=$PATH:/opt/subversion/current/bin
 
 
-# Paths for typical Unix setups; these are the Ubuntu defaults.
+### Paths for typical Unix setups
 
-PATH=$PATH:/usr/local/sbin
+# We prioritize "/usr/local/*" then "/usr/*" then "/*"
+# We prioritize "bin" then "sbin".
+
 PATH=$PATH:/usr/local/bin
-PATH=$PATH:/usr/sbin
+PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/bin
-PATH=$PATH:/sbin
+PATH=$PATH:/usr/sbin
 PATH=$PATH:/bin
+PATH=$PATH:/sbin
+
+# Ubuntu has games :)
+
 PATH=$PATH:/usr/games
 
 # Path for Nagios monitoring software
@@ -54,7 +60,8 @@ PATH=$PATH:/usr/lib/nagios/plugins
 PATH=$PATH:/usr/local/pgsql/bin
 MANPATH=$MANPATH:/usr/local/pgsql/man
 
-# Paths for our SixArm repositories of utilities:
+
+### Paths for our SixArm repositories of utilities
 
 PATH=$PATH:/opt/sixarm/sixarm_debian_dpkg_scripts
 PATH=$PATH:/opt/sixarm/sixarm_gem_scripts

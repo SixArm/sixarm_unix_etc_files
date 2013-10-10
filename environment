@@ -7,45 +7,43 @@
 
 ### PATH
 
-PATH=/
+# Paths for Unix typical system:
+#
+#  * /usr/local/{bin,sbin}
+#  * /usr/{bin,sbin}
+#  * /{bin,sbin}
+#  * /
 
-# Paths for typical user .rbenv ruby environment
+PATH=\
+/usr/local/bin:\
+/usr/local/sbin:\
+/usr/bin:\
+/usr/sbin:\
+/bin:/sbin:\
+/
 
-#PATH=$PATH:~/.rbenv/shims
-#PATH=$PATH:~/.rbenv/bin
 
 # Paths for current versions of software in /opt/*/current directory.
 # We want these versions to take precedence over the system versions.
 
-PATH=$PATH:/opt/gcc/current/bin
-PATH=$PATH:/opt/jdk/current/bin
-PATH=$PATH:/opt/jruby/current/bin
-PATH=$PATH:/opt/jq
-PATH=$PATH:/opt/packer
-PATH=$PATH:/opt/rbenv/bin
-PATH=$PATH:/opt/redis/current/bin
-PATH=$PATH:/opt/ruby/current/bin
-PATH=$PATH:/opt/rubygems/current/bin
-PATH=$PATH:/opt/ruby-build/bin
-PATH=$PATH:/opt/rubygems/current/bin
-PATH=$PATH:/opt/rubymine/current/bin
-PATH=$PATH:/opt/sbt/current/bin
-PATH=$PATH:/opt/sqlite/current/bin
-PATH=$PATH:/opt/sublime/current/
-PATH=$PATH:/opt/subversion/current/bin
-
-
-### Paths for typical Unix setups
-
-# We prioritize "/usr/local/*" then "/usr/*" then "/*"
-# We prioritize "bin" then "sbin".
-
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:/usr/local/sbin
-PATH=$PATH:/usr/bin
-PATH=$PATH:/usr/sbin
-PATH=$PATH:/bin
-PATH=$PATH:/sbin
+PATH=\
+:/opt/gcc/current/bin\
+:/opt/jdk/current/bin\
+:/opt/jruby/current/bin\
+:/opt/jq\
+:/opt/packer\
+:/opt/rbenv/bin\
+:/opt/redis/current/bin\
+:/opt/ruby/current/bin\
+:/opt/rubygems/current/bin\
+:/opt/ruby-build/bin\
+:/opt/rubygems/current/bin\
+:/opt/rubymine/current/bin\
+:/opt/sbt/current/bin\
+:/opt/sqlite/current/bin\
+:/opt/sublime/current\
+:/opt/subversion/current/bin\
+:$PATH
 
 # Ubuntu has games :)
 
@@ -61,18 +59,20 @@ PATH=$PATH:/usr/local/pgsql/bin
 MANPATH=$MANPATH:/usr/local/pgsql/man
 
 
-### Paths for our SixArm repositories of utilities
+### Paths for our SixArm repositories of utilities.
 
-PATH=$PATH:/opt/sixarm/sixarm_debian_dpkg_scripts
-PATH=$PATH:/opt/sixarm/sixarm_gem_scripts
-PATH=$PATH:/opt/sixarm/sixarm_git_gitconfig
-PATH=$PATH:/opt/sixarm/sixarm_htx
-PATH=$PATH:/opt/sixarm/sixarm_mysql_scripts
-PATH=$PATH:/opt/sixarm/sixarm_postgresql_scripts
-PATH=$PATH:/opt/sixarm/sixarm_ruby_gem_scripts
-PATH=$PATH:/opt/sixarm/sixarm_ruby_gemforge
-PATH=$PATH:/opt/sixarm/sixarm_strategem
-PATH=$PATH:/opt/sixarm/sixarm_unix_shell_scripts
+PATH=$PATH\
+:/opt/sixarm/sixarm_debian_dpkg_scripts\
+:/opt/sixarm/sixarm_gem_scripts\
+:/opt/sixarm/sixarm_git_gitconfig\
+:/opt/sixarm/sixarm_htx\
+:/opt/sixarm/sixarm_mysql_scripts\
+:/opt/sixarm/sixarm_postgresql_scripts\
+:/opt/sixarm/sixarm_ruby_gem_scripts\
+:/opt/sixarm/sixarm_ruby_gemforge\
+:/opt/sixarm/sixarm_strategem\
+:/opt/sixarm/sixarm_unix_shell_scripts
+
 
 # Path for git mainline to have up-to-date git scripts.
 # Feel free to move it somewhere better for you.
@@ -83,6 +83,11 @@ PATH=$PATH:/home/sources/git/mainline/bin
 # Feel free to move it somewhere better for you.
 
 PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
+
+
+# Path for user .rbenv ruby environment.
+
+#PATH=~/.rbenv/bin:~/.rbenv/shims:$PATH
 
 
 ### Misc

@@ -73,16 +73,16 @@ PATH_OPT=$PATH_OPT:/opt/subversion/current/bin
 # We create a PATH_SIXARM variable to make it easy to set or unset these.
 
 PATH_SIXARM=
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_debian_dpkg_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_gem_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_git_gitconfig
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_htx
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_mysql_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_postgresql_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_ruby_gem_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_ruby_gemforge
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_strategem
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_unix_shell_scripts
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_debian_dpkg_scripts
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_gem_scripts
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_git_gitconfig
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_htx
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_mysql_scripts
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_postgresql_scripts
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_ruby_gem_scripts
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_ruby_gemforge
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_strategem
+PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_unix_shell_scripts
 
 # Path for user .rbenv ruby environment.
 
@@ -90,7 +90,7 @@ PATH_SIXARM=$PATH_SIXARM:/opt/sixarm/sixarm_unix_shell_scripts
 
 # Finalize
 
-PATH=PATH_OPT:PATH:PATH_SIXARM
+PATH=$PATH_OPT:$PATH:$PATH_SIXARM
 
 
 ### Misc

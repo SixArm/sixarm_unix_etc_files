@@ -12,16 +12,8 @@
 #      /usr/local/{bin,sbin}
 #      /usr/{bin,sbin}
 #      /{bin,sbin}
-#      /
-
-PATH=\
-:/usr/local/bin\
-:/usr/local/sbin\
-:/usr/bin\
-:/usr/sbin\
-:/bin\
-:/sbin\
-:/
+#
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin 
 
 # Games
 
@@ -46,43 +38,37 @@ PATH=$PATH:/home/sources/git/mainline/bin
 
 PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
 
-# Paths for current versions of software in /opt/*/current directory.
+# Paths for current versions of software in /opt/* directory.
 # We typically want these versions to come before the system versions.
-# We create a PATH_OPT variable to make it easy to set or unset these.
+# We create an OPT variable to make it easy to set or unset these.
 
-PATH_OPT=
-PATH_OPT=$PATH_OPT:/opt/gcc/current/bin
-PATH_OPT=$PATH_OPT:/opt/jdk/current/bin
-PATH_OPT=$PATH_OPT:/opt/jruby/current/bin
-PATH_OPT=$PATH_OPT:/opt/jq
-PATH_OPT=$PATH_OPT:/opt/packer
-PATH_OPT=$PATH_OPT:/opt/rbenv/bin
-PATH_OPT=$PATH_OPT:/opt/redis/current/bin\
-PATH_OPT=$PATH_OPT:/opt/ruby/current/bin
-PATH_OPT=$PATH_OPT:/opt/rubygems/current/bin
-PATH_OPT=$PATH_OPT:/opt/ruby-build/bin
-PATH_OPT=$PATH_OPT:/opt/rubygems/current/bin
-PATH_OPT=$PATH_OPT:/opt/rubymine/current/bin
-PATH_OPT=$PATH_OPT:/opt/sbt/current/bin
-PATH_OPT=$PATH_OPT:/opt/sqlite/current/bin
-PATH_OPT=$PATH_OPT:/opt/sublime/current
-PATH_OPT=$PATH_OPT:/opt/subversion/current/bin
-
-# Paths for our SixArm repositories of utilities and various scripts.
-# We typically want these versions to come after any system versions.
-# We create a PATH_SIXARM variable to make it easy to set or unset these.
-
-PATH_SIXARM=
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_debian_dpkg_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_gem_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_git_gitconfig
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_htx
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_mysql_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_postgresql_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_ruby_gem_scripts
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_ruby_gemforge
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_strategem
-PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_unix_shell_scripts
+OPT=
+OPT=$OPT:/opt/gcc/current/bin
+OPT=$OPT:/opt/jdk/current/bin
+OPT=$OPT:/opt/jruby/current/bin
+OPT=$OPT:/opt/jq
+OPT=$OPT:/opt/packer
+OPT=$OPT:/opt/rbenv/bin
+OPT=$OPT:/opt/redis/current/bin
+OPT=$OPT:/opt/ruby/current/bin
+OPT=$OPT:/opt/rubygems/current/bin
+OPT=$OPT:/opt/ruby-build/bin
+OPT=$OPT:/opt/rubygems/current/bin
+OPT=$OPT:/opt/rubymine/current/bin
+OPT=$OPT:/opt/sbt/current/bin
+OPT=$OPT:/opt/sqlite/current/bin
+OPT=$OPT:/opt/sublime/current
+OPT=$OPT:/opt/subversion/current/bin
+OPT=$OPT:/opt/sixarm_debian_dpkg_scripts
+OPT=$OPT:/opt/sixarm_gem_scripts
+OPT=$OPT:/opt/sixarm_git_gitconfig
+OPT=$OPT:/opt/sixarm_htx
+OPT=$OPT:/opt/sixarm_mysql_scripts
+OPT=$OPT:/opt/sixarm_postgresql_scripts
+OPT=$OPT:/opt/sixarm_ruby_gem_scripts
+OPT=$OPT:/opt/sixarm_ruby_gemforge
+OPT=$OPT:/opt/sixarm_strategem
+OPT=$OPT:/opt/sixarm_unix_shell_scripts
 
 # Path for user .rbenv ruby environment.
 
@@ -90,7 +76,7 @@ PATH_SIXARM=$PATH_SIXARM:/opt/sixarm_unix_shell_scripts
 
 # Finalize
 
-PATH=$PATH_OPT:$PATH:$PATH_SIXARM
+PATH=$OPT:$PATH
 
 
 ### Misc

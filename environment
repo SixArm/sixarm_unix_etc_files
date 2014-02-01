@@ -43,6 +43,7 @@ PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
 # We create an OPT variable to make it easy to set or unset these.
 
 OPT=
+OPT=$OPT:/opt/emacs/current/bin
 OPT=$OPT:/opt/gcc/current/bin
 OPT=$OPT:/opt/jdk/current/bin
 OPT=$OPT:/opt/jruby/current/bin

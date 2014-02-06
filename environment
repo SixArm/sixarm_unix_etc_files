@@ -60,6 +60,7 @@ OPT=$OPT:/opt/sbt/current/bin
 OPT=$OPT:/opt/sqlite/current/bin
 OPT=$OPT:/opt/sublime/current
 OPT=$OPT:/opt/subversion/current/bin
+OPT=$OPT:/opt/vim/current/bin
 OPT=$OPT:/opt/sixarm_debian_dpkg_scripts
 OPT=$OPT:/opt/sixarm_gem_scripts
 OPT=$OPT:/opt/sixarm_git_gitconfig

@@ -103,6 +103,11 @@ HISTSIZE=9999
 HISTTIMEFORMAT="%Y/%m/%d %T "
 
 
+### Amazon-related
+
+EC2_HOME=/opt/ec2-api-tools/current/
+
+
 ### Go related
 
 # Our operating system

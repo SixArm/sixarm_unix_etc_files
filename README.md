@@ -2,6 +2,7 @@
 
   * <code>/etc/aliases</code> for email delivery (SixArm specific)
   * <code>/etc/apt</code> and <code>/etc/apt-secure</code> for Aptitude package manager
+  * <code>/etc/bashrc</code> for bash aliases and functions
   * <code>/etc/dpkg-for-server</code> for Debian package manager
   * <code>/etc/environment</code> to set the path, languages, 
   * <code>/etc/init.d</code> for initialization files to run during startup

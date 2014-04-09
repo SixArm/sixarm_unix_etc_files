@@ -1,4 +1,4 @@
-# SixArm.com » Unix » <br> /etc/files for system configuration
+# SixArm.com » Unix » <br> /etc files for system configuration
 
   * <code>/etc/aliases</code> for email delivery (SixArm specific)
   * <code>/etc/apt</code> and <code>/etc/apt-secure</code> for Aptitude package manager

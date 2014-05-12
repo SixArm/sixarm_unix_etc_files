@@ -105,7 +105,7 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 
 ### Amazon-related
 
-EC2_HOME=/opt/ec2-api-tools/current/
+EC2_HOME=/opt/ec2-api-tools/current
 
 
 ### Go related

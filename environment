@@ -128,6 +128,7 @@ PATH="$PATH:$GOBIN"
 
 ### Java-related
 
+JAVA_HOME=/opt/jdk/current/bin/java
 JDK_HOME=/opt/jdk/current
 JRUBY_HOME=/opt/jruby/current
 JRUBY_OPTS=--1.9

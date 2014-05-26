@@ -105,7 +105,7 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 
 ### Amazon-related
 
-EC2_HOME=/opt/ec2-api-tools/current/
+EC2_HOME=/opt/ec2-api-tools/current
 
 
 ### Go related
@@ -128,6 +128,7 @@ PATH="$PATH:$GOBIN"
 
 ### Java-related
 
+JAVA_HOME=/opt/jdk/current/bin/java
 JDK_HOME=/opt/jdk/current
 JRUBY_HOME=/opt/jruby/current
 JRUBY_OPTS=--1.9

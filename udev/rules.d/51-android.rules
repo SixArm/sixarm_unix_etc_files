@@ -1,0 +1,8 @@
+# LG - Nexus 4 phone
+SUBSYSTEM=="usb", ATTR{idVendor}=="1004", MODE="0666"
+
+# LG - Nexus 5 phone
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666"
+
+# Samsung - Nexus 7 & 10
+SUBSYSTEM=="usb", SYSFS{idVendor}=="18d1", MODE="0666"

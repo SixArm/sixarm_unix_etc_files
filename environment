@@ -13,7 +13,7 @@
 #      /usr/{bin,sbin}
 #      /{bin,sbin}
 #
-PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin 
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 
 # Games
 
@@ -37,6 +37,10 @@ PATH=$PATH:/home/sources/git/mainline/bin
 # Feel free to move it somewhere better for you.
 
 PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
+
+# Path to X11 as installed on OSX using brew.
+
+PATH=$PATH:/opt/X11/bin
 
 # Paths for current versions of software in /opt/* directory.
 # We typically want these versions to come before the system versions.

@@ -3,8 +3,9 @@
   * `/etc/aliases` for email delivery (this is SixArm-specific).
   * `/etc/apt` and `/etc/apt-secure` for Aptitude package manager.
   * `/etc/dpkg-for-server` for Debian package manager.
-  * `/etc/environment` to set the path, languages, etc.
+  * `/etc/environment` to set the path, languages, etc. on Debian, Ubuntue, etc.
   * `/etc/init.d` for initialization files to run during startup.
+  * `/etc/launchd.conf` to set shell profile for sh, bash, ksh, etc. on Mac OSX. 
   * `/etc/profile` to set shell profile for sh, bash, ksh, etc. 
   * `/etc/rc.local` for our local startup (sets Thinkpad mouse to fast).
   * `/etc/sudoers` and `/etc/sudoers.d` for the sudo command to run as another user.

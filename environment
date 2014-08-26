@@ -12,9 +12,12 @@
 #      /usr/local/bin,sbin
 #      /usr/bin,sbin
 #      /bin,sbin
-#      ~/bin,sbin
 #
-PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/bin:$HOME/sbin
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+# User bin & sbin
+
+PATH=$PATH:$HOME/bin:$HOME/sbin
 
 # Games
 

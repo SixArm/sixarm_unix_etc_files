@@ -1,0 +1,5 @@
+# Java language
+
+JAVA_HOME=/opt/jdk/current/bin/java
+JDK_HOME=/opt/jdk/current
+

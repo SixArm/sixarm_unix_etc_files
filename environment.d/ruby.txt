@@ -1,0 +1,5 @@
+# Ruby language
+
+GEM_HOME=/opt/gems/current
+GEM_PATH=/opt/gems/current
+RUBYOPT='-rubygems -rpsych'

@@ -1,0 +1,5 @@
+# Oracle-related
+
+ORACLE_HOME=/opt/oracle/instantclient
+NLS_LANG=AMERICAN_AMERICA.UTF8
+DYLD_LIBRARY_PATH=$ORACLE_HOME

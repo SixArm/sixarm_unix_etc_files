@@ -1,0 +1,19 @@
+# Go programming language
+
+# Path
+GOPATH=/opt/go
+
+# Our operating system
+#GOOS=linux
+
+# The CPU architecture of our machine: "386" or "amd64".
+#GOARCH=amd64
+
+# Go root directory
+#GOROOT=/opt/go
+
+# Go binary directory
+#GOBIN=/opt/go/bin
+
+# Go binaries in command path
+PATH="$PATH:$GOBIN"

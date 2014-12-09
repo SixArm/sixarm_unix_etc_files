@@ -1,0 +1,3 @@
+# RubyMine IDE, which runs on Java
+
+RUBYMINE_JDK=/opt/jdk/current

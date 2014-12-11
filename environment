@@ -266,7 +266,7 @@ LLVM_CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # Append
 CPPFLAGS="$CPPFLAGS $LLVM_CPPFLAGS"
-LDFLAGS=""$LDFLAGS $LLVM_LDFLAGS"
+LDFLAGS="$LDFLAGS $LLVM_LDFLAGS"
 
 ##########################################################################
 
@@ -278,7 +278,7 @@ PATH=$PATH:/usr/lib/nagios/plugins
 
 # Node JS
 
-OPT="$OPT:/opt/node/current"
+OPT="$OPT:/opt/node/current/bin"
 
 ##########################################################################
 
@@ -355,4 +355,4 @@ OPT="$OPT:/opt/X11/bin"
 
 # Conclusion
 
-PATH=$OPT:$PATH
+PATH="$OPT:$PATH"

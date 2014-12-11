@@ -4,21 +4,15 @@
 
 OPT=
 OPT=$OPT:/opt/ec2-api-tools/current/bin
-OPT=$OPT:/opt/emacs/current/bin
 OPT=$OPT:/opt/gcc/current/bin
-OPT=$OPT:/opt/jdk/current/bin
-OPT=$OPT:/opt/jruby/current/bin
 OPT=$OPT:/opt/jq
 OPT=$OPT:/opt/packer
 OPT=$OPT:/opt/rbenv/bin
 OPT=$OPT:/opt/redis/current/bin
-OPT=$OPT:/opt/ruby/current/bin
-OPT=$OPT:/opt/rubygems/current/bin
 OPT=$OPT:/opt/ruby-build/bin
 OPT=$OPT:/opt/rubygems/current/bin
 OPT=$OPT:/opt/rubymine/current/bin
 OPT=$OPT:/opt/sbt/current/bin
-OPT=$OPT:/opt/sqlite/current/bin
 OPT=$OPT:/opt/sublime/current
 OPT=$OPT:/opt/subversion/current/bin
 OPT=$OPT:/opt/vim/current/bin
@@ -32,6 +26,3 @@ OPT=$OPT:/opt/sixarm_ruby_gem_scripts
 OPT=$OPT:/opt/sixarm_ruby_gemforge
 OPT=$OPT:/opt/sixarm_strategem
 OPT=$OPT:/opt/sixarm_unix_shell_scripts
-
-# Prepend to path
-PATH=$OPT:$PATH

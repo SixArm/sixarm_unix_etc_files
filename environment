@@ -28,21 +28,15 @@ PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/bin:$HOM
 
 OPT=
 OPT=$OPT:/opt/ec2-api-tools/current/bin
-OPT=$OPT:/opt/emacs/current/bin
 OPT=$OPT:/opt/gcc/current/bin
-OPT=$OPT:/opt/jdk/current/bin
-OPT=$OPT:/opt/jruby/current/bin
 OPT=$OPT:/opt/jq
 OPT=$OPT:/opt/packer
 OPT=$OPT:/opt/rbenv/bin
 OPT=$OPT:/opt/redis/current/bin
-OPT=$OPT:/opt/ruby/current/bin
-OPT=$OPT:/opt/rubygems/current/bin
 OPT=$OPT:/opt/ruby-build/bin
 OPT=$OPT:/opt/rubygems/current/bin
 OPT=$OPT:/opt/rubymine/current/bin
 OPT=$OPT:/opt/sbt/current/bin
-OPT=$OPT:/opt/sqlite/current/bin
 OPT=$OPT:/opt/sublime/current
 OPT=$OPT:/opt/subversion/current/bin
 OPT=$OPT:/opt/vim/current/bin
@@ -57,14 +51,24 @@ OPT=$OPT:/opt/sixarm_ruby_gemforge
 OPT=$OPT:/opt/sixarm_strategem
 OPT=$OPT:/opt/sixarm_unix_shell_scripts
 
-# Prepend to path
-PATH=$OPT:$PATH
-
 ##########################################################################
 
 # Amazon-related
 
 EC2_HOME=/opt/ec2-api-tools/current
+
+##########################################################################
+
+# Android
+
+ANDROID_HOME=/opt/android-sdk
+PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+##########################################################################
+
+# Emacs
+
+OPT="$OPT:/opt/emacs/current/bin"
 
 ##########################################################################
 
@@ -113,9 +117,10 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 
 # Java language
 
-JAVA_HOME=/opt/jdk/current/bin/java
-JDK_HOME=/opt/jdk/current
+OPT="$OPT:/opt/java/jdk/current/bin"
 
+JAVA_HOME=/opt/java/jdk/current/bin/java
+JDK_HOME=/opt/java/jdk/current
 
 ##########################################################################
 
@@ -271,6 +276,12 @@ PATH=$PATH:/usr/lib/nagios/plugins
 
 ##########################################################################
 
+# Node JS
+
+OPT="$OPT:/opt/node/current"
+
+##########################################################################
+
 # Oracle-related
 
 ORACLE_HOME=/opt/oracle/instantclient
@@ -281,8 +292,8 @@ DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 # Postgres database
 
-PATH=$PATH:/usr/local/pgsql/bin
-MANPATH=$MANPATH:/usr/local/pgsql/man
+PATH="$PATH:/usr/local/pgsql/bin"
+MANPATH="$MANPATH:/usr/local/pgsql/man"
 
 ##########################################################################
 
@@ -301,8 +312,11 @@ RBENV_ROOT=~/.rbenv
 
 # Ruby language
 
-GEM_HOME=/opt/gems/current
-GEM_PATH=/opt/gems/current
+OPT="$OPT:/opt/ruby/mri/current/bin"
+OPT="$OPT:/opt/ruby/jruby/current/bin"
+
+GEM_HOME=/opt/rubygems/mri/current
+GEM_PATH=/opt/rubygems/mri/current
 RUBYOPT='-rubygems -rpsych'
 
 ##########################################################################
@@ -314,6 +328,8 @@ RUBYMINE_JDK=/opt/jdk/current
 ##########################################################################
 
 # SQLite database
+
+OPT="$OPT:/opt/sqlite/current/bin"
 
 SQLITE_LD_LIBRARY_PATH="/opt/sqlite/current/lib"
 SQLITE_LD_RUN_PATH="/opt/sqlite/current/lib"
@@ -333,4 +349,10 @@ TERM=xterm-256color
 
 # X11 X Window System
 
-PATH=$PATH:/opt/X11/bin
+OPT="$OPT:/opt/X11/bin"
+
+##########################################################################
+
+# Conclusion
+
+PATH=$OPT:$PATH

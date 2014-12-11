@@ -1,5 +1,7 @@
 # SQLite database
 
+OPT="$OPT:/opt/sqlite/current/bin"
+
 SQLITE_LD_LIBRARY_PATH="/opt/sqlite/current/lib"
 SQLITE_LD_RUN_PATH="/opt/sqlite/current/lib"
 SQLITE_LDFLAGS="-L/opt/sqlite/current/lib"

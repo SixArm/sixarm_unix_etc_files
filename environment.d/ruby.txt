@@ -1,8 +1,0 @@
-# Ruby language
-
-OPT="$OPT:/opt/ruby/mri/current/bin"
-OPT="$OPT:/opt/ruby/jruby/current/bin"
-
-GEM_HOME=/opt/rubygems/mri/current
-GEM_PATH=/opt/rubygems/mri/current
-RUBYOPT='-rubygems -rpsych'
